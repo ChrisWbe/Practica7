@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.christianquintero.practica7peluchitos.Actualizar_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        style="@style/layoutViewStyle">
+        <TextView
+            style="@style/textViewStyle"
+            android:text="@string/actualizar"/>
+
+        <EditText
+            style="@style/editViewStyle"
+            android:hint="@string/id"
+            android:id="@+id/mID"
+            />
+        <EditText
+            style="@style/editViewStyle"
+            android:hint="@string/nombre"
+            android:id="@+id/mNombre"
+            />
+        <EditText
+            style="@style/editViewStyle"
+            android:hint="@string/cantidad"
+            android:id="@+id/mCantidad"
+            />
+        <EditText
+            style="@style/editViewStyle"
+            android:hint="@string/valor"
+            android:id="@+id/mValor"
+            />
+
+        <Button
+            style="@style/buttonViewStyle"
+            android:text="@string/bActualizar"
+            android:onClick="_actualizar"/>
+    </LinearLayout>
+
+</FrameLayout>

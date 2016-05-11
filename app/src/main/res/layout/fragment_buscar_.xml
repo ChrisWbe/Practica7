@@ -1,0 +1,31 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.christianquintero.practica7peluchitos.Buscar_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            style="@style/layoutViewStyle">
+            <TextView
+                style="@style/textViewStyle"
+                android:text="@string/buscar"/>
+            <EditText
+                style="@style/editViewStyle"
+                android:text="@string/id"/>
+            <EditText
+                style="@style/editViewStyle"
+                android:text="@string/nombre"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"/>
+            <Button
+                style="@style/buttonViewStyle"
+                android:text="@string/bBuscar"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

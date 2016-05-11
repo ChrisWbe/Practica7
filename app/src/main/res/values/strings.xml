@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Practica7 Peluchitos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agregar">AGREGAR NUEVO PELUCHE</string>
+    <string name="buscar">BUSCAR PELUCHE</string>
+    <string name="eliminar">ELIMINAR PELUCHE</string>
+    <string name="actualizar">MODIFICAR PELUCHE</string>
+    <string name="mostrar">PELUCHES EN LA TIENDA</string>
+    <string name="venta">VENTA DE PELUCHES</string>
+    <string name="ganancias">GANANCIAS</string>
+    <string name="id">ID_PELUCHE</string>
+    <string name="nombre">NOMBRE</string>
+    <string name="cantidad">CANTIDAD</string>
+    <string name="valor">VALOR</string>
+    <string name="bAgregar">AGREGAR</string>
+    <string name="bBuscar">BUSCAR</string>
+    <string name="bEliminar">ELIMINAR</string>
+    <string name="bActualizar">ACTUALIZAR</string>
+    <string name="bVenta">REALIZAR VENTA</string>
+</resources>

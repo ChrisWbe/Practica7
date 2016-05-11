@@ -1,0 +1,28 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.christianquintero.practica7peluchitos.Eliminar_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        style="@style/layoutViewStyle">
+        <TextView
+            style="@style/textViewStyle"
+            android:text="@string/eliminar"/>
+        <EditText
+            style="@style/editViewStyle"
+            android:hint="@string/id"
+            android:id="@+id/eID"/>
+        <EditText
+            style="@style/editViewStyle"
+            android:hint="@string/nombre"
+            android:id="@+id/eNombre"/>
+
+        <Button
+            style="@style/buttonViewStyle"
+            android:text="@string/bEliminar"
+            android:onClick="_eliminar"/>
+    </LinearLayout>
+
+</FrameLayout>

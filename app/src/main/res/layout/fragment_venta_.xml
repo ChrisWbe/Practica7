@@ -1,0 +1,30 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.christianquintero.practica7peluchitos.Venta_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        style="@style/layoutViewStyle">
+        <TextView
+            style="@style/textViewStyle"
+            android:text="@string/venta"/>
+        <EditText
+            style="@style/editViewStyle"
+            android:text="@string/id"
+            />
+        <EditText
+            style="@style/editViewStyle"
+            android:text="@string/nombre"
+            />
+        <EditText
+            style="@style/editViewStyle"
+            android:text="@string/cantidad"
+            />
+        <Button
+            style="@style/buttonViewStyle"
+            android:text="@string/bVenta"/>
+    </LinearLayout>
+
+</FrameLayout>

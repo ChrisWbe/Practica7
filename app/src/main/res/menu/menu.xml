@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/agregar"
+        android:id="@+id/mAgregar" />
+    <item
+        android:title="@string/buscar"
+        android:id="@+id/mBuscar"/>
+    <item
+        android:title="@string/eliminar"
+        android:id="@+id/mEliminar"/>
+    <item
+        android:title="@string/actualizar"
+        android:id="@+id/mActualizar"/>
+    <item
+        android:title="@string/mostrar"
+        android:id="@+id/mPeluches"/>
+    <item
+        android:title="@string/venta"
+        android:id="@+id/mVenta"/>
+    <item
+        android:title="@string/ganancias"
+        android:id="@+id/mGanancias"/>
+
+</menu>

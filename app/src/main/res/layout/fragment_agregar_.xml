@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.christianquintero.practica7peluchitos.Agregar_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        style="@style/layoutViewStyle">
+        <TextView
+            style="@style/textViewStyle"
+            android:text="@string/agregar" />
+
+        <EditText
+            style="@style/editViewStyle"
+            android:hint="@string/id"
+            android:id="@+id/aID"
+            />
+        <EditText
+            style="@style/editViewStyle"
+            android:hint="@string/nombre"
+            android:id="@+id/aNombre"
+            />
+        <EditText
+            style="@style/editViewStyle"
+            android:hint="@string/cantidad"
+            android:id="@+id/aCantidad"
+            />
+        <EditText
+            style="@style/editViewStyle"
+            android:hint="@string/valor"
+            android:id="@+id/aValor" />
+
+        <Button
+            style="@style/buttonViewStyle"
+            android:text="@string/bAgregar"
+            android:onClick="_agregar"/>
+    </LinearLayout>
+
+
+</FrameLayout>
