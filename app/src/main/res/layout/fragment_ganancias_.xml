@@ -12,8 +12,14 @@
             android:text="@string/ganancias"/>
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"/>
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:id="@+id/g_salida"
+            android:layout_marginTop="20dp"/>
+        <Button
+            style="@style/buttonViewStyle"
+            android:text="@string/ganancias"
+            android:onClick="_ganancias"/>
     </LinearLayout>
 
 

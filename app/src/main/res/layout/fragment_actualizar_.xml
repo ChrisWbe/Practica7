@@ -15,21 +15,25 @@
             style="@style/editViewStyle"
             android:hint="@string/id"
             android:id="@+id/mID"
+            android:inputType="number"
             />
         <EditText
             style="@style/editViewStyle"
             android:hint="@string/nombre"
             android:id="@+id/mNombre"
+            android:inputType="date"
             />
         <EditText
             style="@style/editViewStyle"
             android:hint="@string/cantidad"
             android:id="@+id/mCantidad"
+            android:inputType="number"
             />
         <EditText
             style="@style/editViewStyle"
             android:hint="@string/valor"
             android:id="@+id/mValor"
+            android:inputType="number"
             />
 
         <Button

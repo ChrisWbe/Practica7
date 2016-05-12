@@ -2,11 +2,15 @@ package com.christianquintero.practica7peluchitos;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
 
         db = peluchitos.getWritableDatabase();
 
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        Inicio_Fragment inicio = new Inicio_Fragment();
+        ft.add(android.R.id.content, inicio).commit();
+
+
+
     }
 
     @Override
@@ -44,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
 
         switch (item.getItemId()){
+            case R.id.inicio:
+                Inicio_Fragment fragment0 = new Inicio_Fragment();
+                ft.replace(android.R.id.content, fragment0).commit();
+                return true;
+
             case R.id.mAgregar:
                 Agregar_Fragment fragment = new Agregar_Fragment();
                 ft.replace(android.R.id.content, fragment).commit();
@@ -327,6 +343,7 @@ public class MainActivity extends AppCompatActivity {
                     else if(cantidad_salida < Integer.valueOf(cantidad.getText().toString())){
                         Toast.makeText(this, "La cantidad supera el numero de Peluches", Toast.LENGTH_LONG).show();
                     }
+
                 }
             }
         }
@@ -348,9 +365,44 @@ public class MainActivity extends AppCompatActivity {
 
         ContentValues dineroNuevo = new ContentValues();
 
-        //dineroNuevo.put("dinero", f_valor);
-        //db.update("Ganancia", dineroNuevo, null, null);
+        dineroNuevo.put("dinero", f_valor);
+        db.update("Ganancia", dineroNuevo, null, null);
 
+
+        if(f_cantidad < 5){
+
+            String title = "Se Esta Acabando", content = "Pelcuhes con pocas unidades", ticker = "Pocos";
+            NotificationCompat.Builder builder = new  NotificationCompat.Builder(this);
+            builder.setContentTitle(title).setContentText(content).setTicker(ticker).setSmallIcon(android.R.drawable.ic_menu_myplaces).setContentInfo("ID numero: "+f_id);
+
+            Intent noIntent = new Intent(MainActivity.this, MainActivity.class);
+            PendingIntent contIntent = PendingIntent.getActivity(MainActivity.this, 0, noIntent, 0);
+            builder.setContentIntent(contIntent);
+
+            NotificationManager nm = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+            nm.notify(1,builder.build());
+
+        }
+
+
+    }
+
+    public void _ganancias(View objeto) {
+        TextView salida = (TextView) findViewById(R.id.g_salida);
+
+        String[] campos = new String[]{"dinero"};
+        Cursor c = db.query("Ganancia", campos, "dinero", null, null, null, null);
+
+        if (c.moveToNext()) {
+            salida.setText("");
+            do {
+                int id_salida = c.getInt(0);
+
+
+                salida.setText("" + id_salida +"\n");
+
+            } while (c.moveToNext());
+        }
     }
 
 
