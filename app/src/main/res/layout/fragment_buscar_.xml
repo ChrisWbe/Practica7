@@ -15,17 +15,21 @@
                 android:text="@string/buscar"/>
             <EditText
                 style="@style/editViewStyle"
-                android:text="@string/id"/>
+                android:hint="@string/id"
+                android:id="@+id/bID"/>
             <EditText
                 style="@style/editViewStyle"
-                android:text="@string/nombre"/>
+                android:hint="@string/nombre"
+                android:id="@+id/bNombre"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:id="@+id/output_buscar"/>
             <Button
                 style="@style/buttonViewStyle"
-                android:text="@string/bBuscar"/>
+                android:text="@string/bBuscar"
+                android:onClick="_buscar"/>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

@@ -12,19 +12,23 @@
             android:text="@string/venta"/>
         <EditText
             style="@style/editViewStyle"
-            android:text="@string/id"
+            android:hint="@string/id"
+            android:id="@+id/vID"
             />
         <EditText
             style="@style/editViewStyle"
-            android:text="@string/nombre"
+            android:hint="@string/nombre"
+            android:id="@+id/vNombre"
             />
         <EditText
             style="@style/editViewStyle"
-            android:text="@string/cantidad"
+            android:hint="@string/cantidad"
+            android:id="@+id/vCantidad"
             />
         <Button
             style="@style/buttonViewStyle"
-            android:text="@string/bVenta"/>
+            android:text="@string/bVenta"
+            android:onClick="_venta"/>
     </LinearLayout>
 
 </FrameLayout>

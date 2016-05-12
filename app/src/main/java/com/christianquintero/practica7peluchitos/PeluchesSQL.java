@@ -14,6 +14,7 @@ public class PeluchesSQL extends SQLiteOpenHelper{
 
     //creacion de la tabla
     String myTabla = "CREATE TABLE Peluches(id INTEGER , nombre TEXT, cantidad INTEGER, valor INTEGER)";
+    String myGanancias = ("CREATE TABLE Ganancia(dinero INTEGER)");
 
     public PeluchesSQL(Context context) {
         super(context, DATA_BASE_NAME, null, DATA_VERSION);
@@ -22,6 +23,7 @@ public class PeluchesSQL extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(myTabla);
+        db.execSQL(myGanancias);
 
     }
 
